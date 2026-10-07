@@ -1,0 +1,5 @@
+anthropic>=0.40.0
+openai>=1.50.0        # only needed if provider is "openai"
+pyyaml>=6.0
+python-dotenv>=1.0.0
+pytest>=8.0           # for running the tests

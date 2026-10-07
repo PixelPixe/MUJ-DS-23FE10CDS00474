@@ -1,0 +1,26 @@
+# ---------------------------------------------------------------------------
+# Project configuration. Change behaviour here; no code edits needed.
+# ---------------------------------------------------------------------------
+
+llm:
+  provider: openai
+  model: gemini-3.5-flash-lite
+  api_key_env: GEMINI_API_KEY
+  base_url: https://generativelanguage.googleapis.com/v1beta/openai/
+  temperature: 0.0
+  max_tokens: 1024
+  timeout_seconds: 30
+  max_retries: 3                     # SDK-level retries for rate limits / network errors
+
+classification:
+  categories: [Work, Personal, Commercial]   # must match the names used in the prompt file
+  max_body_chars: 2000                 # long emails are cut here to save tokens
+  confidence_threshold: 0.6            # below this, the email is flagged needs_review
+  parse_retries: 2                     # re-ask the model if its answer is not valid JSON
+
+runtime:
+  workers: 1                           # parallel API calls
+  cache_enabled: true                  # skip API calls for emails already classified
+  cache_path: .cache/predictions.json
+  output_dir: outputs
+  prompt_file: prompts/prompts.yaml

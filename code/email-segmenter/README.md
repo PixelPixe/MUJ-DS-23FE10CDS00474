@@ -1,3 +1,21 @@
+# MUJ-DS-23FE10CDS00474
+
+| | |
+|---|---|
+| **Name** | Aditi Ganguli |
+| **Registration Number** | 23FE10CDS00474 |
+| **Branch** | B.Tech CSE (Data Science) |
+| **Batch** | G |
+| **GitHub Username** | PixelPixe |
+| **Project Title** | Email Segmentation using an LLM API (Work / Personal / Commercial) |
+
+## Repository structure
+
+- `code/email-segmenter/` - NLP project: classifies emails into Work, Personal or Commercial using an LLM API. See its own README for setup and usage.
+- `resources/` - evaluation results and screenshots
+- `assignments/`, `notebooks/`, `presentations/`, `capstone/` - other course work
+
+
 # Email Segmenter
 
 Sorts emails into three categories using an LLM API:
